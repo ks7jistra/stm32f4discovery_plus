@@ -29,32 +29,32 @@ using namespace stm32plus;
 int main(void)
 {
 
-  //Initialise Systick
-  MillisecondTimer::initialise();
+	//Initialise Systick
+	MillisecondTimer::initialise();
 
-  Nvic::initialise();
+	Nvic::initialise();
 
-  MillisecondTimer::delay(100);
+	MillisecondTimer::delay(100);
 
-  F4Discovery board;
+	F4Discovery board;
 
-  while(1){
-      if( board.button.getState() == true){
-	  //If pressed the button
-	  board.led1.On();
-	  board.led2.On();
-	  board.led3.On();
-	  board.led4.On();
-      }
-      else{
-	  board.led1.Off();
-	  board.led2.Off();
-	  board.led3.Off();
-	  board.led4.Off();
-      }
-  }
+	while(1){
+		if( board.button.getState() == true){
+			//If the button is pressed
+			board.led1.On();
+			board.led2.On();
+			board.led3.On();
+			board.led4.On();
+		}
+		else{
+			board.led1.Off();
+			board.led2.Off();
+			board.led3.Off();
+			board.led4.Off();
+		}
+	}
 
-  return 0;
+	return 0;
 
 }
 
