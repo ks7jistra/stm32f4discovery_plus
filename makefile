@@ -208,8 +208,8 @@ OS_SUPPORT		= BARE_METAL
 #OS_SUPPORT		= USE_FREERTOS
 
 #Set ROSSERIAL_PORT
-ROSSERIAL_PORT = "UsbDeviceCdcComPort"
-#ROSSERIAL_PORT = "UsartInterruptWithBuffer<Usart1_Remap1<Usart1InterruptFeature>>"
+#ROSSERIAL_PORT = "UsbDeviceCdcComPort" #Buggy
+ROSSERIAL_PORT = "UsartInterruptWithBuffer<Usart6<Usart6InterruptFeature>>"
 
 #USE_USB			= USE_USBHOST
 
