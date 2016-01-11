@@ -115,6 +115,10 @@ public:
 			for(;;);      // onError() has already locked up
 	}
 
+	bool readyToSend(){
+		return opened;
+	}
+
 	bool send(uint8_t data)
 	{
 		if( !opened ) return false;
